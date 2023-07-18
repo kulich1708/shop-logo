@@ -1,0 +1,112 @@
+//<FORM>
+// Снипет (HTML):
+button {
+	cursor: pointer;
+	border: none;
+}
+input {
+	width: 100%;
+	height: 100%;
+}
+.btn {
+	background: #f68038;
+	text-transform: uppercase;
+	font-size: 12px;
+	font-weight: 900;
+	line-height: 1.5;
+	color: #fff;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	border: none;
+	padding: 0 25px;
+	position: relative;
+	height: 39px;
+	cursor: pointer;
+	span {
+		z-index: 2;
+	}
+	&:after {
+		height: 100%;
+		width: 0;
+		left: 50%;
+		top: 0;
+		position: absolute;
+		content: "";
+		display: block;
+	}
+	@media screen and (min-width: $tablet) {
+		&:hover {
+			transition: 0.2s;
+			&:after {
+				transition: 0.2s;
+				width: 100%;
+				background-color: #d86822;
+				left: 0;
+				z-index: 1;
+			}
+		}
+		&:not(:hover) {
+			transition: 0.2s;
+			&:after {
+				transition: 0.2s;
+			}
+		}
+	}
+}
+.input {
+	outline: none;
+	&._form-error {
+		border: 1px solid red;
+	}
+}
+.form__error {
+	color: red;
+}
+
+.checkbox {
+	&__input {
+		width: 0;
+		height: 0;
+		visibility: hidden;
+		margin: 0;
+		padding: 0;
+	}
+	&__text {
+		font-size: 12px;
+		font-weight: 300;
+	}
+}
+//</FORM>
+
+// <BUTTONS>
+// Снипет (HTML): btn
+// @import "button";
+
+// <INPUTS>
+// Снипет (HTML): inp
+// @import "input";
+
+// <CHECK>
+// Снипет (HTML): chk
+// @import "checkbox";
+
+// <RADIO>
+// Снипет (HTML): opt
+// @import "radio";
+
+// <SELECT>
+// Снипет (HTML): sel
+// @import "select";
+
+// <RATING>
+// Снипет (HTML): rating
+// @import "rating";
+
+// <QUANTITY>
+// Снипет (HTML): qa
+// @import "quantity";
+
+// <RANGE>
+// Снипет (HTML):
+// @import "range";

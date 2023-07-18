@@ -1,0 +1,29 @@
+.title {
+	font-size: 44px;
+	line-height: math.div(60, 44) * 100%;
+	font-weight: 700;
+	@media screen and (max-width: $mobile) {
+		font-size: 32px;
+		line-height: math.div(40, 32) * 100%;
+	}
+}
+.text {
+	font-weight: normal;
+	font-size: 16px;
+	line-height: math.div(23, 16) * 100%;
+}
+
+._ibg {
+	position: relative;
+	img {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		object-fit: cover;
+	}
+}
+._spoller {
+	cursor: pointer;
+}

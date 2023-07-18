@@ -1,0 +1,70 @@
+@font-face {
+	font-family: "icons";
+	font-display: swap;
+	src: url("../fonts/icons/icons.ttf") format("truetype"), url("../fonts/icons/icons.woff") format("woff"),
+		url("../fonts/icons/icons.woff2#icons") format("woff2");
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+}
+%ic {
+	font-family: "icons";
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+[class^="_icon-"],
+[class*=" _icon-"] {
+	&::before {
+		@extend %ic;
+		display: block;
+	}
+	&::after {
+		@extend %ic;
+		display: block;
+	}
+}
+
+// иконочный шрифт =====================
+
+._icon-x:before {
+	content: "\e907";
+}
+._icon-catalog-arrow:after {
+	content: "\e906";
+	display: flex;
+}
+._icon-catalog-grid:before {
+	content: "\e904";
+}
+._icon-catalog-list:before {
+	content: "\e905";
+}
+._icon-double_arrow:before {
+	content: "\e903";
+}
+._icon-filter-trash:before {
+	content: "\e902";
+}
+._icon-sr-arrow:before {
+	content: "\e901";
+}
+._icon-sl-arrow:before {
+	content: "\e900";
+}
+._icon-check:after {
+	content: "\e90a";
+}
+._icon-pr-arrow:before {
+	content: "\e908";
+}
+._icon-pl-arrow:before {
+	content: "\e909";
+}
+
+// ======================================

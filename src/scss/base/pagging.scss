@@ -1,0 +1,58 @@
+.pagging {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	// .pagging__arrow
+	&__arrow {
+		&::before {
+			color: #e7e7e7;
+			font-size: 37px;
+		}
+		@media (any-hover: hover) {
+			&:hover::before {
+				transition: 0.15s;
+				color: #fd8424;
+			}
+			&:not(:hover)::before {
+				transition: 0.1s;
+			}
+		}
+	}
+	// .pagging__list
+	&__list {
+		display: flex;
+		margin: 0 30px;
+		li {
+			&:not(:last-child) {
+				margin: 0px 7px 0px 0px;
+			}
+		}
+	}
+	// .pagging__item
+	&__item {
+		font-size: 18px;
+		font-weight: 900;
+		line-height: 1.33;
+		color: #333;
+		border-radius: 50%;
+		width: 33px;
+		height: 33px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		&._active {
+			background-color: #fd8424;
+			color: #fff;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: #fd8424;
+				color: #fff;
+				transition: 0.15s;
+			}
+			&:not(:hover) {
+				transition: 0.1s;
+			}
+		}
+	}
+}
